@@ -43,9 +43,4 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 3);
   })
 
-
-  // subtract 4 from 7 and get 3
-  // calculator.multiply() - multiply 3 by 5 and get 15
-  // calculator.divide() - divide 21 by 7 and get 3
-
 });
