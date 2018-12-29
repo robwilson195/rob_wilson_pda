@@ -11,4 +11,41 @@ describe('calculator', function () {
     assert.equal(true, true)
   })
 
+  it('should be able to add 1 and 4', function() {
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(4);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 5);
+  })
+
+  it('should be able to subtract 3 from 7', function() {
+    calculator.numberClick(7);
+    calculator.operatorClick('-');
+    calculator.numberClick(4);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 3);
+  })
+
+  it('should be able to multiply 3 and 5', function() {
+    calculator.numberClick(3);
+    calculator.operatorClick('*');
+    calculator.numberClick(5);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 15);
+  })
+
+  it('should be able to divide 21 by 7', function() {
+    calculator.numberClick(21);
+    calculator.operatorClick('/');
+    calculator.numberClick(7);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 3);
+  })
+
+
+  // subtract 4 from 7 and get 3
+  // calculator.multiply() - multiply 3 by 5 and get 15
+  // calculator.divide() - divide 21 by 7 and get 3
+
 });
